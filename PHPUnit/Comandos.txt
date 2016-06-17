@@ -1,0 +1,4 @@
+cd C:\wamp\www\testesPhpUnit\vendor\bin
+phpunit --colors --debug C:/wamp/www/testesPhpUnit/tests/PHPNativeElementsTest.php
+
+phpunit --colors --debug C:/wamp/www/testesPhpUnit/tests/PHPCarroTest.php

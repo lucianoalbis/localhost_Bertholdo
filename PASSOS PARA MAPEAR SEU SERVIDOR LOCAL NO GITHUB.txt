@@ -1,0 +1,19 @@
+PASSOS PARA MAPEAR SEU SERVIDOR LOCAL NO GITHUB
+
+PASSOS
+
+1 - CRIAR PASTA WWW NO GITHUB
+    -> ESSA PASTA WWW DEPENDO DO SEU SERVIDOR, A MESMA PODE SER QUALQUER NOME
+       ESSE NOME TEM QUE SER IGUAL AO DOS PROJETOS NO SERVIDOR LOCAL.
+
+2 - DENTRO DA PASTA WWW DO SERVIDOR LOCAL EXECUTAR OS COMANDOS;
+    -> git init
+    -> git add .
+    -> git commit -m "First commit"
+    -> git remote add origin {URL DA PASTA WWW NO GITHUB}
+    -> git remote -v
+    -> git push origin master
+
+3 - PRONTO, SEUS PROJETOS ESTÃO DENTRO DO GITHUB
+
+REFERENCIA: https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
