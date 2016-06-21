@@ -1,4 +1,4 @@
-PASSOS PARA MAPEAR SEU SERVIDOR LOCAL NO GITHUB
+﻿PASSOS PARA MAPEAR SEU SERVIDOR LOCAL NO GITHUB
 
 PASSOS
 
@@ -16,4 +16,4 @@ PASSOS
 
 3 - PRONTO, SEUS PROJETOS ESTÃO DENTRO DO GITHUB
 
-REFERENCIA: https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
+REFERENCIA: https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line
