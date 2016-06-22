@@ -34,6 +34,8 @@ echo $assistente->getEndereco();
 
 /*
 # Testando o polimorfismo de metodo
+# O Polimorfismo só existe onde tem herança, ou seja seria as
+# formas diferentes de uma mesma assinatuda de metodo em subClasses
 $usuario = new Usuario;
 echo $usuario->getSalario();
 $assistente = new Assistente();
@@ -47,7 +49,7 @@ echo $assistente->getSalario();
 // ===============================================================
 
 /*
-#.Testando a sobrecarga de metodos - No PHP isso não pode ocorrer
+# Testando a sobrecarga de metodos - No PHP isso não pode ocorrer
 $assistente = new Assistente();
 $assistente->imprime('Nome');
 $assistente->imprime();
@@ -57,7 +59,7 @@ $assistente->imprime();
 // ===============================================================
 
 /*
-#.Testando herança e polimorfismo - Classes abstratas
+# Testando herança e polimorfismo - Classes abstratas
 abstract class Funcionario {
   protected double salario;
   public double getBonificacao() {
@@ -81,14 +83,15 @@ abstract class Funcionario {
 }
 ------
 Obs: Toda classe que for filha dessa classe deverá instanciar
-     o ´metodo, caso contrário dará erro.     
+     o metodo, caso contrário dará erro.     
 ------     
 */
 
 // ===============================================================
 
 /*
-#. Classe abstrata x Inteface
+# Classe abstrata x Inteface
+
 Interface
 -> Uma classe pode implementar diversas interfaces
 -> Uma interface não pode conter qualquer tipo de código, muito menos código padrão.
