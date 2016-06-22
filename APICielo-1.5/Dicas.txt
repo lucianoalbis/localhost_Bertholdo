@@ -1,0 +1,7 @@
+https://github.com/DeveloperCielo/Webservice-1.5-php
+
+Ao publicar na produção modificar os dados a seguir;
+ -> C:\wamp\www\Webservice-1.5-php-master\src\Cielo\Http\CurlOnlyPostHttpClient.php
+ -> curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false); p/ curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
+
+ Manual: https://developercielo.github.io/Webservice-1.5/#transação-com-token
