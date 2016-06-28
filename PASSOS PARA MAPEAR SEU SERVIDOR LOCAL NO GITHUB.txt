@@ -1,4 +1,6 @@
-﻿PASSOS PARA MAPEAR SEU SERVIDOR LOCAL NO GITHUB
+﻿------------------------------------------------------------------------------------------------------------
+PASSOS PARA MAPEAR SEU SERVIDOR LOCAL NO GITHUB
+------------------------------------------------------------------------------------------------------------
 
 PASSOS
 
@@ -17,3 +19,13 @@ PASSOS
 3 - PRONTO, SEUS PROJETOS ESTÃO DENTRO DO GITHUB
 
 REFERENCIA: https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line
+
+------------------------------------------------------------------------------------------------------------
+PASSOS PARA MAPEAR SEU GITHUB NO SERVIDOR LOCAL
+------------------------------------------------------------------------------------------------------------
+
+PASSOS
+
+1 - ENTRE NO DIRETÓRIO WWW
+2 - DIGITE O COMANDO git clone <SEU_DIR_NO_GIT>
+3 - <ENTER> Pronto, SEUS PROJETOS VÃO SER BAIXADOS PARA SUA MÁQUINA.
