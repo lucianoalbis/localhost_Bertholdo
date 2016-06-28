@@ -1,0 +1,81 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+<title>Verificar Origem - Destino da Carga</title>
+
+<style type="text/css" media="screen">
+      .map_canvas { float: left; }
+      form { width: 300px; float: left; }
+      fieldset { width: 320px; margin-top: 20px}
+      fieldset label { display: block; margin: 0.5em 0 0em; }
+      fieldset input { width: 95%; }
+    </style>
+
+</head>
+
+<body>
+
+<div class="map_canvas"></div>
+
+	<form action="mapa.php" method="post">
+	  Origem da carga:<br>
+	  <input id="geocompleteOri" type="text" name="origem" size="100" value="" placeholder="Endereço de origem da carga"><br>
+    <input type="button" value="Get Location" onclick="getLocationConstant()"/><br><br>
+	  Destino da carga:<br>
+	  <input id="geocompleteDest" type="text" name="destino" size="100" value="" placeholder="Endereço de destino da carga"><br><br>
+	  <input type="submit" value="Submit">
+	</form>
+
+	<script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+  <script src="jquery.geocomplete.js"></script>
+
+	<script type="text/javascript">
+
+      // # Ajuda de pesquisa de endereço
+
+      $(function(){
+        $("#geocompleteOri").geocomplete({
+          map: ".map_canvas",
+          details: "form",
+          types: ["geocode", "establishment"],
+        });
+
+        $("#geocompleteDest").geocomplete({
+          map: ".map_canvas",
+          details: "form",
+          types: ["geocode", "establishment"],
+        });
+
+      });
+
+      // # Geolocation para facilitar
+
+      function getLocationConstant()
+      {
+          if(navigator.geolocation)
+          {
+              navigator.geolocation.getCurrentPosition(onGeoSuccess,onGeoError);  
+          } 
+          else 
+          {
+              document.getElementById("geocompleteOri").value = "Your browser or device doesn't support Geolocation";
+          }
+      }
+
+      function onGeoSuccess(event)
+      {
+          document.getElementById("geocompleteOri").value =  event.coords.latitude + ',' + event.coords.longitude;
+      }
+      
+      function onGeoError(event)
+      {
+          document.getElementById("geocompleteOri").value = "Error code " + event.code + ". " + event.message;
+      }
+
+    </script>
+
+</body>
+
+</html>

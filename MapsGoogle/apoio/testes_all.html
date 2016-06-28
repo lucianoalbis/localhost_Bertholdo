@@ -1,0 +1,27 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+<title>Verificar Origem - Destino da Carga</title>
+</head>
+
+<body>
+
+<script type="text/javascript">
+function doSubmit(){
+
+	var form1 = document.getElementById("form1");
+	form1.action = '?bola';
+
+	form1.submit();
+}
+
+</script>
+<form id="form1" method="GET" action="exemplo.php" onsubmit="submete()">
+  <input type="text" name="preco_a" size="50" value="1000.00">
+  <input type="text" name="preco_b" size="50" value="3000.00">
+  <input type="button" onclick="javascript:doSubmit();">
+</form>
+
+</body>
+
+</html>

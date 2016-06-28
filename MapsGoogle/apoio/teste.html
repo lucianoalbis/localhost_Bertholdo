@@ -1,0 +1,81 @@
+http://blog.whatgeek.com.pt/2015/03/adicionar-remover-campos-dinamicamente-com-jquery/
+<html>
+    <head>
+        <script type="text/javascript">
+        //function displayResult()
+        //{
+            //var linha = "";
+
+
+            //document.getElementById("myTable").insertRow(-1).innerHTML = '<td>1</td><td>2</td>';
+       // }
+
+
+        $(document).ready(function() {
+            var max_fields = 10;
+            var x = 1;
+            $('#add_field').click (function(e) {
+                alert('2222');
+                    e.preventDefault();
+                    if (x < max_fields) {
+                            $('#listas').append('\
+                                            <tr class="remove' + x + '"><td><input type="text" name="nome[]" id="nome"></td>\
+                                            <td><input type="text" name="dta_nasc[]" id="dta_nasc" placeholder="yyyy-mm-dd"></td>\
+                                            <td>\
+                                                    Sim&nbsp;<input type="radio" value="1" name="cool['+ x +']" id="cool">&nbsp;\
+                                                    N&atilde;o&nbsp;<input type="radio" value="0" name="cool['+ x +']" id="cool" checked>&nbsp;\
+                                            </td>\
+                                            <td><a href="#" class="remove_campo" id="remove' + x +'">X</a></td>\
+                            ');
+                            x++;
+                    }
+            });
+
+            $('#listas').on("click",".remove_campo",function(e) {
+                    e.preventDefault();
+                    var tr = $(this).attr('id');
+                    $('#listas tr.'+ tr).remove();
+                    x--;
+            });
+
+        });
+
+        </script>
+    </head>
+
+    <body>
+        <!--      
+        <table id="myTable" border="1">
+            <tr>
+                <td>Item</td>                
+                <td>Altura (cm)</td>
+                <td>Largura (cm)</td>
+                <td>Comprimento (cm)</td>
+            </tr>
+        </table>
+        <br />
+        <button type="button" onclick="displayResult()">Insert new row</button>            
+        -->
+
+        <input type="button" id="add_field" value="Adicionar">
+        <table id="listas" border="0">
+            <tr>
+                <th>Nome</th>
+                <th>Data Nasc.</th>
+                <th>Estamos bem?</th>
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+            </tr>
+            <tr>
+                <td><input type="text" name="utente[]" id="utente" maxlength="150"></td>
+                <td><input type="text" name="dta_nasc[]" id="dta_nasc" maxlength="10" placeholder="yyyy-mm-dd"></td>
+                <td>
+                    Sim&nbsp;<input type="radio" value="1" name="cool[0]" id="urgente">&nbsp;
+                    N&atilde;o&nbsp;<input type="radio" value="0" name="cool[0]" id="urgente" checked>&nbsp;
+                </td>
+            </tr>
+        </table>
+
+
+    </body>
+</html>
