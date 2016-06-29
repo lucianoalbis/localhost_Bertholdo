@@ -1,0 +1,93 @@
+=====================================================
+Referencias
+=====================================================
+
+-> http://tableless.com.br/tudo-que-voce-queria-saber-sobre-git-e-github-mas-tinha-vergonha-de-perguntar/
+
+=====================================================
+Comandos iniciais do git
+=====================================================
+
+1 - git add <arquivos...> Este comando adiciona o(s) arquivo(s) em um lugar que chamamos de INDEX, que funciona como uma área do git no qual os arquivos possam ser enviados ao Github. É importante saber que ADD não está adicionando um arquivo novo ao repositório, mas sim dizendo que o arquivo (sendo novo ou não) está sendo preparado para entrar na próxima revisão do repositório.
+2 - git commit -m "comentário qualquer" Este comendo realiza o que chamamos de “commit”, que significa pegar todos os arquivos que estão naquele lugar INDEX que o comando add adicionou e criar uma revisão com um número e um comentário, que será vista por todos.
+3 - git push Push (empurrar) é usado para publicar todos os seus commits para o github. Neste momento, será pedido a sua senha.
+4 - git status Exibe o status do seu repositório atual
+
+=====================================================
+Clonando e modificando um repositório existente
+=====================================================
+
+git clone https://github.com/lucianoalbis/site.git
+cd site/
+git status
+touch file.html
+git status
+git add file.html
+git status
+git commit -m "Criacao file"
+git push
+
+=====================================================
+Modificando mensagem do commit
+=====================================================
+
+git commit --amend
+
+=====================================================
+Comando utilizado para baixar arquivos atualizados no
+github por outrs pessoas ou por vc mesmo via máquina
+em casa.
+=====================================================
+
+git pull
+
+=====================================================
+Trabalhando com branches (Ramificar o projeto em 2)
+=====================================================
+
+1 - Crie o branche no git
+2 - git pull (pra saber que foi criado outro branche)
+3 - Mude de branche no prompt
+    -> git checkout new_menu
+4 - git status (para verificar se mudou de branche)
+
+Obs: Para mudar para branche master execute
+     -> git checkout master
+     A partir dai devemos usar os comites com -am
+     em comites nos branches, o -m não rola;
+     -> git commit -am "Modificando file"
+
+Obs: Ao mudar de branches os arquivos físicos na
+minha máquina são modificados para o branche atual.
+
+=====================================================
+Merge com conflitos
+=====================================================
+
+Exemplo do master para o new_menu, ou seja pegar uma
+atualização do index.html do master e incorporar no
+index.html do new_menu
+
+-> git merge master
+
+Como teve modificações na mesma linha, vai ser gerado
+um alerta de conflito, basta verificar os conflitos
+no arquivo e aplicar os comandos normais;
+
+-> git commit -am "Com conflito file"
+-> git push
+
+=====================================================
+Merge sem conflitos
+=====================================================
+
+Quando não alteramos a mesma linha de um arquivo em branches diferentes, conseguimos realizar um merge sem ocasionar conflitos.
+
+-> git commit -am "Sem conflito file"
+-> git push
+
+=====================================================
+=====================================================
+
+=====================================================
+=====================================================
